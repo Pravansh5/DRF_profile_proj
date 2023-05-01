@@ -4,6 +4,7 @@ from rest_framework.routers import DefaultRouter
 
 router=DefaultRouter()
 router.register('profile',views.UserProfileViewSet)
+router.register('feed',views.UserProfileFeedViewSet)
 
 urlpatterns = [
     path('hello-view/',views.HelloApiView.as_view()),
@@ -11,4 +12,3 @@ urlpatterns = [
     path('',include(router.urls))
 
 ]
- 
